@@ -1,9 +1,21 @@
 .transaction-history {
-    flex-grow: 1;
-    &__sub-heading {
-        color: #787878;
-    }
-    &__card {
-        width: 23%;
-    }
+  width: 100%;
+  flex-grow: 1;
+  &__sub-heading {
+    color: #787878;
+  }
+  &__card {
+    width: 23%;
+  }
+}
+
+.responsive-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
 }
