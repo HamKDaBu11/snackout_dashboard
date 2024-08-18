@@ -1,0 +1,31 @@
+$tags: a796e4, fe8b8b, 04c7d3, 5ee2ab;
+
+.card {
+    border-radius: 16px !important;
+    @each $tag in $tags {
+        &__#{$tag} {
+            color: #{$tag};
+        }
+    }
+    &__title {
+        width: 65%;
+    }
+    &__small {
+        font-size: 0.75rem;
+        color: #c2c2c2;
+    }
+    &__percentage {
+        &--rising {
+            color: #027a48;
+            ::after {
+                content: url('../../assets/rising.svg');
+            }
+        }
+        &--dropping {
+            color: #c92035;
+            ::after {
+                content: url('../../assets/dropping.svg');
+            }
+        }
+    }
+}

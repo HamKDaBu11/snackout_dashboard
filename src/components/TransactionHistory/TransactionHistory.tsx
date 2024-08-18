@@ -1,25 +1,69 @@
-import { Box, Typography } from '@mui/material';
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import { Box } from '@mui/material';
+import Card from '../Card/Card';
+import Delivery from '../Svg/Delivery';
+import Dinein from '../Svg/Dinein';
+import Pickups from '../Svg/Pickups';
+import Revenue from '../Svg/Revenue';
 import './TransactionHistory.scss';
+
+const CARD_DATA: any = [
+    {
+        title: 'Revenue',
+        color: '#a796e4',
+        image: <Revenue />,
+        percentage: '10',
+        isRising: true
+    },
+    {
+        title: 'Delivery',
+        color: '#fe8b8b',
+        image: <Delivery />,
+        percentage: '10',
+        isRising: true
+    },
+    {
+        title: 'Pick ups',
+        color: '#04c7d3',
+        image: <Pickups />,
+        percentage: '10',
+        isRising: false
+    },
+    {
+        title: 'Dine in',
+        color: '#5ee2ab',
+        image: <Dinein />,
+        percentage: '10',
+        isRising: true
+    }
+]
 
 const TransactionHistory = () => {
     return (
-        <Box component="main"
-            sx={{ p: 1, boxShadow: 0}}>
-            <Typography paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non
-                enim praesent elementum facilisis leo vel. Risus at ultrices mi tempus
-                imperdiet. Semper risus in hendrerit gravida rutrum quisque non tellus.
-                Convallis convallis tellus id interdum velit laoreet id donec ultrices.
-                Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-                adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra
-                nibh cras. Metus vulputate eu scelerisque felis imperdiet proin fermentum
-                leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-                feugiat vivamus at augue. At augue eget arcu dictum varius duis at
-                consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem donec massa
-                sapien faucibus et molestie ac.
-            </Typography>
-        </Box>
+        <div className='transaction-history container'>
+            <Box component="main"
+                sx={{ p: 1, boxShadow: 0 }}>
+                <div className='d-flex justify-content-between'>
+                    <div>
+                        <h5 className='h5 mb-0 fw-bold'>Welcome back, Anzish</h5>
+                        <small className='transaction-history__sub-heading'>Monitor the Transaction History</small>
+                        <p></p>
+                        <h5 className='h5 fw-bold'>Dashboard</h5>
+                    </div>
+                    <div>
+                        <NotificationsIcon />
+                    </div>
+                </div>
+                <div className='d-flex justify-content-between'>
+                    {CARD_DATA.map((card: any) => {
+                        // let svg = Delivery
+                        return (
+                            <Card className="transaction-history__card" card_info={card} />
+                        )
+                    })}
+                </div>
+            </Box>
+        </div>
     )
 }
 
