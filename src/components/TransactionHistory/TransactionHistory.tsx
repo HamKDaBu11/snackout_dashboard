@@ -3,6 +3,7 @@ import { Box } from '@mui/material';
 import Card from '../Card/Card';
 import Customers from "../Customers/Customers";
 import OrdersGraph from '../Graphs/OrdersGraph/OrdersGraph';
+import RestaurantsGraph from '../Graphs/RestaurantsGraph/RestaurantsGraph';
 import MostOrdered from "../MostOrdered/MostOrdered";
 import Ongoing from "../Ongoing/Ongoing";
 import Delivery from '../Svg/Delivery';
@@ -70,10 +71,10 @@ const TransactionHistory = () => {
           })}
         </div>
         <div className="responsive-delivery-cards w-full pt-3">
-          <div className="col-12 col-md-12 col-lg-8">
-            {/* <RestaurantsGraph /> */}
+          <div className="col-12 col-md-12 col-lg-8 col-xl-8">
+            <RestaurantsGraph />
           </div>
-          <div className="col-12 col-md-12 col-lg-4 flex-shrink-1">
+          <div className="col-12 col-md-12 col-lg-4 col-xl-4 flex-shrink-1">
             <OrdersGraph />
           </div>
         </div>
