@@ -1,14 +1,15 @@
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import { Box } from "@mui/material";
-import Card from "../Card/Card";
-import Delivery from "../Svg/Delivery";
-import Dinein from "../Svg/Dinein";
-import Pickups from "../Svg/Pickups";
-import Revenue from "../Svg/Revenue";
-import "./TransactionHistory.scss";
-import Ongoing from "../Ongoing/Ongoing";
-import MostOrdered from "../MostOrdered/MostOrdered";
+import NotificationsIcon from '@mui/icons-material/Notifications';
+import { Box } from '@mui/material';
+import Card from '../Card/Card';
 import Customers from "../Customers/Customers";
+import OrdersGraph from '../Graphs/OrdersGraph/OrdersGraph';
+import MostOrdered from "../MostOrdered/MostOrdered";
+import Ongoing from "../Ongoing/Ongoing";
+import Delivery from '../Svg/Delivery';
+import Dinein from '../Svg/Dinein';
+import Pickups from '../Svg/Pickups';
+import Revenue from '../Svg/Revenue';
+import './TransactionHistory.scss';
 
 const CARD_DATA: any = [
   {
@@ -69,13 +70,21 @@ const TransactionHistory = () => {
           })}
         </div>
         <div className="responsive-delivery-cards w-full pt-3">
-          <div className="col">
+          <div className="col-12 col-md-12 col-lg-8">
+            {/* <RestaurantsGraph /> */}
+          </div>
+          <div className="col-12 col-md-12 col-lg-4 flex-shrink-1">
+            <OrdersGraph />
+          </div>
+        </div>
+        <div className="responsive-delivery-cards w-full pt-3">
+          <div className="col-12 col-md-12 col-lg-4">
             <Ongoing />
           </div>
-          <div className="col">
+          <div className="col-12 col-md-12 col-lg-4">
             <MostOrdered />
           </div>
-          <div className="col">
+          <div className="col-12 col-md-12 col-lg-4">
             <Customers />
           </div>
         </div>
