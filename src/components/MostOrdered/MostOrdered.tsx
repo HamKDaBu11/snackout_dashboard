@@ -1,12 +1,12 @@
+import chilliwings from "./chilliwings.svg";
+import "./MostOrdered.scss";
+import noodles from "./noodles.svg";
 import saladbowl from "./saladbowl.svg";
 import smoothiebowl from "./smoothiebowl.svg";
-import chilliwings from "./chilliwings.svg";
-import noodles from "./noodles.svg";
-import "./MostOrdered.scss";
 
 const MostOrdered = () => {
   return (
-    <div className="ongoing-card">
+    <div className="mostordered">
       <h1 className="card-title">Most Ordered</h1>
       <div className="d-flex pt-2 flex-column ordered-items-container">
         <div className="d-flex justify-content-between w-100">

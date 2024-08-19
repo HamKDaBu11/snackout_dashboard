@@ -1,10 +1,10 @@
 import chartbar from "./chart-bar.svg";
-import loyalCustomers from "./loyalcustomers.svg";
 import "./Customers.scss";
+import loyalCustomers from "./loyalcustomers.svg";
 
 const Customers = () => {
   return (
-    <div className="ongoing-card">
+    <div className="customers">
       <h1 className="card-title">Customers</h1>
       <div className="d-flex pt-2 flex-column align-items-center">
         <div className="num-customers">103,467</div>
