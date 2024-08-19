@@ -1,0 +1,40 @@
+.mostordered-card {
+  border-color: white;
+  box-shadow: 0px 0px 16px 0px rgba(51, 51, 51, 0.1) !important;
+  border-radius: 16px !important;
+  padding: 16px;
+  width: 300px;
+}
+
+.ordered-items-container {
+  gap: 24px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.row-heading {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.row-heading-small {
+  font-size: 10px;
+  font-weight: 500;
+  text-align: left;
+  padding-left: 16px;
+}
+
+.price {
+  color: #a796e4;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+}
+.order-num {
+  color: #a796e4;
+}

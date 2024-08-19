@@ -1,4 +1,5 @@
 .transaction-history {
+  padding-top: 32px;
   width: 100%;
   flex-grow: 1;
   &__sub-heading {
@@ -16,6 +17,17 @@
   gap: 16px;
   @media (max-width: 768px) {
     flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+.responsive-delivery-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 16px;
+  @media (max-width: 768px) {
+    flex-direction: column;
     gap: 24px;
   }
 }

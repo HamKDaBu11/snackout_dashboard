@@ -1,36 +1,38 @@
-import { useEffect, useState } from 'react';
-import '../../assets/search.svg';
-import './Input.scss';
+import { useEffect, useState } from "react";
+
+import "../../assets/search.svg";
+import "./Input.scss";
 
 const Input = (props: any) => {
-    const [placeholderVal, setPlaceholderVal] = useState(false);
-    const [classDisappear, addClassDisappear] = useState('');
+  const [placeholderVal, setPlaceholderVal] = useState(false);
+  const [classDisappear, addClassDisappear] = useState("");
 
-    useEffect(() => {
-
-        function togglePlaceholder() {
-            if (placeholderVal) {
-                addClassDisappear('input__placeholder--disappear');
-            } else {
-                addClassDisappear('');
-            }
-        }
-
-        togglePlaceholder()
-    }, [placeholderVal])
-
-    function handlePlaceholder() {
-        setPlaceholderVal(prevValue => !prevValue)
+  useEffect(() => {
+    function togglePlaceholder() {
+      if (placeholderVal) {
+        addClassDisappear("input__placeholder--disappear");
+      } else {
+        addClassDisappear("");
+      }
     }
+    togglePlaceholder();
+  }, [placeholderVal]);
 
-    console.log("PLACEHOLDER VALUE: ", placeholderVal)
+  function handlePlaceholder() {
+    setPlaceholderVal((prevValue) => !prevValue);
+  }
 
-    return (
-        <div className={`d-flex ${props.className}`}>
-            <input className='input' onClick={handlePlaceholder}/>
-            <span className={`input__placeholder ${classDisappear}`}>{props.placeholder}</span>
-        </div>
-    )
-}
+  console.log("PLACEHOLDER VALUE: ", placeholderVal);
 
-export default Input
+  return (
+    <div className={`d-flex w-full ${props.className}`}>
+      <input
+        className="input"
+        placeholder="Search"
+        onClick={handlePlaceholder}
+      />
+    </div>
+  );
+};
+
+export default Input;

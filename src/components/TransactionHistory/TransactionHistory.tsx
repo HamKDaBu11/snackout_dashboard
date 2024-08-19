@@ -6,6 +6,9 @@ import Dinein from "../Svg/Dinein";
 import Pickups from "../Svg/Pickups";
 import Revenue from "../Svg/Revenue";
 import "./TransactionHistory.scss";
+import Ongoing from "../Ongoing/Ongoing";
+import MostOrdered from "../MostOrdered/MostOrdered";
+import Customers from "../Customers/Customers";
 
 const CARD_DATA: any = [
   {
@@ -51,7 +54,7 @@ const TransactionHistory = () => {
               Monitor the Transaction History
             </small>
             <p></p>
-            <h5 className="h5 fw-bold">Dashboard</h5>
+            <h5 className="h5 fw-bold snackout-text">Dashboard</h5>
           </div>
           <div>
             <NotificationsIcon />
@@ -64,6 +67,17 @@ const TransactionHistory = () => {
               <Card className="transaction-history__card" card_info={card} />
             );
           })}
+        </div>
+        <div className="responsive-delivery-cards w-full pt-3">
+          <div className="col">
+            <Ongoing />
+          </div>
+          <div className="col">
+            <MostOrdered />
+          </div>
+          <div className="col">
+            <Customers />
+          </div>
         </div>
       </Box>
     </div>

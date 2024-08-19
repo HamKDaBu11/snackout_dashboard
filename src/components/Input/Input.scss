@@ -1,21 +1,12 @@
 .input {
-    position: relative;
-    flex-grow: 0.70;
-    background: url('../../assets/search.svg') no-repeat;
-    background-position-y: center;
-    background-position-x: 2%;
-    background-color: #efeff1;
-    border: 1px solid #efeff1;
-    border-radius: 10px;
-    padding: 5px;
-
-}
-
-.input__placeholder {
-    position: absolute;
-    left: 50px;
-    top: 12px;
-    &--disappear {
-        display: none;
-    }
+  text-indent: 20px;
+  position: relative;
+  flex-grow: 0.7;
+  background: url("../../assets/search.svg") no-repeat;
+  background-position-y: center;
+  background-position-x: 2%;
+  background-color: #efeff1;
+  border: 1px solid #efeff1;
+  border-radius: 10px;
+  padding: 5px;
 }
