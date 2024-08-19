@@ -1,0 +1,93 @@
+// .orders-graph {
+//     height: 300px;
+//     background: url('../../../assets/ordersGraph.svg') no-repeat center;
+//     background-size: 100% 100%;
+// }
+
+.orders-graph {
+  position: relative;
+  border-color: white;
+  box-shadow: 0px 0px 16px 0px rgba(51, 51, 51, 0.1) !important;
+  border-radius: 16px !important;
+  //   padding: 16px;
+  height: 330px;
+  gap: 8px;
+  &__chart {
+    position: absolute;
+    top: 90px;
+    right: 10px;
+    z-index: -1;
+    width: 100%;
+    height: 50%;
+    background: url('../../../assets/chart.svg') no-repeat;
+    background-size: 100% 100%;
+  }
+  &__box-afternoon {
+    color: #fff;
+    font-size: 8px;
+  }
+  &__box-time {
+    color: #e5e0f8;
+    font-size: 8px;
+  }
+  &__box-orders {
+    color: #fff;
+    font-size: 11px;
+  }
+  &__heading {
+    color: #343450;
+  }
+  &__sub-heading {
+    color: #7f7f7f;
+    font-size: 0.75rem;
+  }
+  &__times {
+    padding-top: 100px;
+  }
+  &__afternoon {
+    position: relative;
+    font-size: 0.75rem;
+    color: #121212;
+    &:before {
+      position: absolute;
+      left: -12px;
+      top: -5px;
+      content: "•";
+      color: #cb77ff;
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+  &__evening {
+    position: relative;
+    font-size: 0.75rem;
+    color: #121212;
+    &:before {
+      position: absolute;
+      left: -12px;
+      top: -5px;
+      content: "•";
+      color: #4ef4d6;
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+  &__morning {
+    position: relative;
+    font-size: 0.75rem;
+    color: #121212;
+    &:before {
+      position: absolute;
+      left: -12px;
+      top: -5px;
+      content: "•";
+      color: #ffa594;
+      font-size: 24px;
+      line-height: 1;
+    }
+  }
+  &__time-percentage {
+    font-size: 0.75rem;
+    color: #121212;
+  }
+}
